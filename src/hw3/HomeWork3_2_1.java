@@ -9,16 +9,15 @@ public class HomeWork3_2_1 {
 	public static void main (String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num = (int)(Math.random()*10);
-		System.out.println("現在來跟我玩猜數字");
-		System.out.println("在0~9中選一個數字");
+		System.out.println("開始猜數字(0~9)");
 		while (true){
 			int guess = sc.nextInt(); 
 			if(guess == num) {
-				System.out.println("答對啦，我的數字就是" + num);
+				System.out.println("答對啦!答案就是" + num);
 				break;
 			} 
 			else if (guess != num && guess >= 0 && guess <= 9) {
-				System.out.println("哈哈 太嫩了，再猜~");
+				System.out.println("答錯囉，再猜~");
 			}
 			else {
 				System.out.println("亂猜，是選0~9的數字，再猜~");
