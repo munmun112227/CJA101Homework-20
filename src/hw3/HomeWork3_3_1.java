@@ -64,13 +64,13 @@ public class HomeWork3_3_1 {
 			}
 			System.out.println();
 		}
-		System.out.println("總共" + ((arr[0].length * arr[1].length)-1) + "個數字");
+		System.out.println("總共" + ((arr[0].length * arr[1].length)-1) + "個數字可以選");
 	}
 
 	public static void main(String[] args) {
 		HomeWork3_3_1 lo = new HomeWork3_3_1();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("請輸入1~9中你不要的數字");
+		System.out.println("阿文...請輸入你不喜歡的數字(１～９)");
 		int num;
 		while(true) {
 			num = sc.nextInt();
