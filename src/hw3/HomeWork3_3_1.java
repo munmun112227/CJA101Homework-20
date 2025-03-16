@@ -10,7 +10,7 @@ public class HomeWork3_3_1 {
 //		int[0]是十位數，int[1]是十位數
 		int[][] a = new int[2][];
 //		判斷十位數的數量
-		if (c > 5) {
+		if (c > 4) {
 			a[0] = new int[5];
 		} else {
 			a[0] = new int[4];
@@ -56,18 +56,33 @@ public class HomeWork3_3_1 {
 	public void printNum(int arr[][]) {
 		for (int i = 0; i < arr[0].length; i++) {
 			for (int j = 0; j < arr[1].length; j++) {
+//				排除0
+				if(arr[0][i] * 10 + arr[1][j] == 0) {
+					continue;
+				}
 				System.out.print(arr[0][i] * 10 + arr[1][j] + " ");
 			}
 			System.out.println();
 		}
-		System.out.println("總共" + arr[0].length * arr[1].length + "個數字");
+		System.out.println("總共" + ((arr[0].length * arr[1].length)-1) + "個數字");
 	}
 
 	public static void main(String[] args) {
 		HomeWork3_3_1 lo = new HomeWork3_3_1();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("請輸入1~9你不要的數字");
-		int num = sc.nextInt();
+		System.out.println("請輸入1~9中你不要的數字");
+		int num;
+		while(true) {
+			num = sc.nextInt();
+			if(num > 9 || num < 1) {
+				System.out.println("叫你選數字1到數字9之間的數字，看不懂逆，重選 (┛`д´)┛");
+				continue;
+			}
+			else {
+				break;
+			}
+		}
+		
 		System.out.println("====================");
 		System.out.println("以下是逢" + num + "就挑掉的數字");
 		int[][] wishNum = lo.delNum(num);
