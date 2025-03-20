@@ -21,6 +21,13 @@ public class HomeWork4_5 {
 			year = sc.nextInt();
 			month = sc.nextInt();
 			day = sc.nextInt();
+//			判斷輸入年月的值是否合理
+			if(month > 12 || month < 1 || year < 0) {
+				System.out.println("異常，再輸入一次");
+				System.out.println("請輸入日期，以空格分隔年月日");
+				continue;
+			}
+//			判斷輸入日的值是否合理
 			if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
 				if(day <= monthDays[1][month-1]) {
 					break;
