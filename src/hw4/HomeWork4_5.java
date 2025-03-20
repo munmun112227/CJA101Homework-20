@@ -20,8 +20,8 @@ public class HomeWork4_5 {
 		
 		int days = 0;
 		for(int i = 0; i < (month - 1); i++) {
-//		利用年份除4取餘數判斷是不是閏年
-			if(year % 4 == 0) {
+//		利用年份除4, 400, 100取餘數判斷是不是閏年
+			if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
 				days += monthDays[1][i];
 			}
 			else {
