@@ -17,6 +17,41 @@ package hw5a;
 //(1) 使用public MyRectangle()建構子建立物件,設定width, depth為10, 20,透過getArea()印出結果
 //(2) 使用public MyRectangle(double width, double depth)建構子建立物件,設定width, depth為10, 20,透過getArea()印出結果
 
-public class HomeWork5_4 {
+public class HomeWork5_4 { // MyRectangleMain類別用HomeWork5_4代替
 
+	public static void main(String[] args) {
+		MyRectangle m1 = new MyRectangle();
+		m1.setWidth(10);
+		m1.setDepth(20);
+		System.out.println(m1.getArea());
+		
+		MyRectangle m2 = new MyRectangle(10, 20);
+		System.out.println(m2.getArea());
+	}
+}
+
+class MyRectangle{
+	private double width;
+	private double depth;
+	
+	public MyRectangle() {
+		
+	}
+	
+	public MyRectangle(double width, double depth) {
+		this.width = width;
+		this.depth = depth;
+	}
+	
+	void setWidth(double width) {
+		this.width = width; 
+	}
+	
+	void setDepth(double depth) {
+		this.depth = depth;
+	}
+	
+	double getArea() {
+		return width*depth;
+	}
 }
