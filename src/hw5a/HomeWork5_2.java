@@ -13,7 +13,7 @@ public class HomeWork5_2 {
 		int[] randomNum = new int[10];
 		int sum = 0;
 		
-		System.out.print("10個亂數：");
+		System.out.print("本次亂數的結果：");
 		
 		for(int i = 0; i < randomNum.length; i++) {
 			randomNum[i] = (int)(Math.random()*101);
