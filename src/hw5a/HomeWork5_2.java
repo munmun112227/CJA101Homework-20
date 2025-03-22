@@ -4,4 +4,24 @@ package hw5a;
 
 public class HomeWork5_2 {
 
+	public static void main(String[] args) {
+		HomeWork5_2 p = new HomeWork5_2();
+		p.randAvg();
+	}
+	
+	public void randAvg() {
+		int[] randomNum = new int[10];
+		int sum = 0;
+		
+		System.out.print("10個亂數：");
+		
+		for(int i = 0; i < randomNum.length; i++) {
+			randomNum[i] = (int)(Math.random()*101);
+			sum += randomNum[i];
+			System.out.print(randomNum[i] + " ");
+		}
+		
+		System.out.println();
+		System.out.println("平均數：" + (sum / randomNum.length));
+	}
 }
