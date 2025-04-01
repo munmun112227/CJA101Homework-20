@@ -30,6 +30,7 @@ public class HomeWork7_3 {
 		BufferedOutputStream bos = new BufferedOutputStream(fos);
 			while((data = bis.read()) != -1) {
 				bos.write(data);
+				bos.flush();
 			}
 
 		System.out.println("完成複製");
