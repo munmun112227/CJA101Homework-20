@@ -30,7 +30,7 @@ public class HomeWork7_4 {
 			dir.mkdir();
 			System.out.println(dir.getName() + "資料夾已新增");
 		}
-		File file = new File("C:\\CJA101_Workspace\\Homework-20\\data\\" + obj.getClass().getSimpleName() + ".ser");
+		File file = new File("C:\\CJA101_Workspace\\Homework-20\\data\\Object.ser");
 		FileOutputStream fos = new FileOutputStream(file);
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		
@@ -39,6 +39,6 @@ public class HomeWork7_4 {
 		oos.close();
 		fos.close();
 		
-		System.out.println( obj.getClass().getSimpleName() + ".ser 製作完成");
+		System.out.println("輸出完成");
 	}
 }
